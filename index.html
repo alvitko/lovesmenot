@@ -5,48 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>loves me/not</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
-      background: white;
-      font-family: monospace;
-      font-size: 12px;
-      line-height: 1.5;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
       overflow: auto;
+      font-family: monospace;
     }
 
-    .wrapper {
-      width: 800px;
-      height: 600px;
+    .stage {
       position: relative;
-      transform-origin: top left;
-    }
-
-    /* Scale down on small screens */
-    @media (max-width: 850px) {
-      .wrapper {
-        transform: scale(0.8);
-      }
-    }
-
-    @media (max-width: 650px) {
-      .wrapper {
-        transform: scale(0.65);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .wrapper {
-        transform: scale(0.5);
-      }
+      width: 1000px;
+      height: 800px;
+      min-width: 1000px;
+      min-height: 800px;
     }
 
     pre, p {
@@ -80,7 +55,7 @@
   </style>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="stage">
     <p id="result">loves me??? loves me not????</p>
 
     <pre id="flower">
