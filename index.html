@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>loves me/not</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     html, body {
-      margin: 0; padding: 0;
-      height: 100%;
-      overflow: auto;
+      margin: 0; padding: 0; height: 100%;
       font-family: monospace;
+      overflow-x: hidden; /* prevent horizontal scroll on mobile */
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      background: white;
     }
     #wrapper {
       position: relative;
-      min-width: 1400px; /* wide enough for layout */
-      min-height: 1000px;
-      margin: 0 auto;
-      /* background: #fff; */ /* optional background */
+      width: 1400px;
+      height: 1000px;
+      /* center horizontally with margin auto on desktop */
+      margin: 20px auto;
+      /* make it focusable to center scroll */
+      outline: none;
+      transform-origin: top left;
+      transition: transform 0.2s ease;
     }
     pre {
+      position: absolute;
       font-size: 12px;
-      font-family: monospace;
       line-height: 1.5;
       cursor: pointer;
-      position: absolute;
       user-select: none;
-      /* prevent text selection on click */
+      margin: 0;
     }
     #flower {
       top: 425px;
@@ -44,17 +53,30 @@
       position: absolute;
       top: 170px;
       left: 720px;
-      font-size: 12px;
-      line-height: 1.5;
       transform: translate(-50%, -50%);
+      font-size: 12px;
       user-select: none;
-      pointer-events: none; /* make text not block clicks on petals */
+      pointer-events: none;
       margin: 0;
+    }
+
+    /* RESPONSIVE SCALE ON MOBILE */
+    @media (max-width: 1400px) {
+      body {
+        justify-content: center;
+      }
+      #wrapper {
+        /* scale down to fit viewport width */
+        transform: scale(calc(100vw / 1400));
+        /* height scales with width, so adjust height accordingly */
+        height: calc(1000 * (100vw / 1400));
+        margin: 20px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="wrapper">
+  <div id="wrapper" tabindex="-1">
     <p id="result">loves me??? loves me not????</p>
 
     <pre id="flower">
@@ -142,13 +164,9 @@
       });
     });
 
+    // Scroll flower into view after load
     window.addEventListener("load", () => {
-      const flower = document.getElementById("flower");
-      flower.scrollIntoView({
-        behavior: "auto",
-        block: "center",
-        inline: "center",
-      });
+      document.getElementById("wrapper").scrollIntoView({behavior: "auto", block: "center", inline: "center"});
     });
   </script>
 </body>
