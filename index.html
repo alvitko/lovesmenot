@@ -3,227 +3,188 @@
   <head>
     <meta charset="UTF-8" />
     <title>loves me/not</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-body {
-  overflow: hidden;
-  touch-action: none;
-}
+      /* Wrapper to contain all the content and allow scrolling */
+      #wrapper {
+        position: relative;
+        width: 1400px; /* wide enough to contain all absolute elements */
+        min-height: 1000px; /* tall enough for your layout */
+        margin: 0 auto; /* center horizontally on desktop */
+      }
+
+      /* Make body scrollable with vertical and horizontal scrolling */
+      body {
+        overflow-x: auto;
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+      }
+
       pre {
         font-size: 12px;
         font-family: monospace;
         line-height: 1.5;
-        position: fixed;
-        top: 55%;
-        left: 48%;
-        transform: translate(-50%, -50%);
-        cursor: pointer; /* Add cursor pointer to indicate clickable */
+        cursor: pointer; /* clickable pointer */
+        position: absolute; /* all your existing absolute positioning */
       }
-      p {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 170px;
-        left: 720px;
-        transform: translate(-50%, -50%);
-      }
+
+      /* Positioning each element relative to wrapper */
       #flower {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
         top: 425px;
         left: 687px;
       }
 
       #petal1 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
         top: 273px;
         left: 709px;
       }
 
       #petal2 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
         top: 273px;
         left: 755px;
       }
 
       #petal3 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
         top: 310px;
         left: 790px;
       }
 
       #petal4 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
         top: 368px;
         left: 787px;
       }
 
       #petal5 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
         top: 398px;
         left: 750px;
       }
 
       #petal6 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
         top: 385px;
         left: 703px;
       }
+
       #petal7 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
         top: 349px;
         left: 691px;
       }
 
       #petal8 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
         top: 300px;
         left: 665px;
+      }
+
+      p#result {
+        position: absolute;
+        top: 170px;
+        left: 720px;
+        font-size: 12px;
+        line-height: 1.5;
+        transform: translate(-50%, -50%);
+        margin: 0;
       }
     </style>
   </head>
   <body>
-    <p id="result">loves me??? loves me not????</p>
-    <pre id="flower">
-  
-                  ./#####\.         
-                  |#######| 
-                  `\#####/'         
+    <div id="wrapper">
+      <p id="result">loves me??? loves me not????</p>
 
+      <pre id="flower">
+                      ./#####\.
+                      |#######| 
+                      `\#####/'         
 
+                         |
+                         |     _,
+                        /  __/ /
+                       | _/ _.'
+                       |/__/
+                       \
+      </pre>
 
-                     |
-                     |     _,
-                    /  __/ /
-                   | _/ _.'
-                   |/__/
-                   \
+      <pre class="petal" id="petal1">
+       __         
+    .'     `..
+    |        |
+     \      .
+      </pre>
 
-    </pre>
+      <pre class="petal" id="petal2">
+        __
+     .'     `.
+    |        |
+    .       /
+      </pre>
 
-    <pre class="petal" id="petal1">
-   __         
-.'     `..
-|        |
- \      .
-</pre
-    >
+      <pre class="petal" id="petal3">
+          __
+      /    `.
+    /       |
+    -------/
+      </pre>
 
-    <pre class="petal" id="petal2">
-    __
- .'     `.
-|        |
-.       /
-</pre
-    >
+      <pre class="petal" id="petal4">
+      _ _   
+            \
+     \      |
+       \  _.'
+      </pre>
 
-    <pre class="petal" id="petal3">
-      __
-  /    `.
-/       |
--------/
-</pre
-    >
+      <pre class="petal" id="petal5">
+    .     \ 
+    |       |
+     \.__ .'
+      </pre>
 
-    <pre class="petal" id="petal4">
-  _ _   
-        \
- \      |
-   \  _.'
+      <pre class="petal" id="petal6">
+     /      . 
+    |       |   
+     `._  ./
+      </pre>
 
-</pre
-    >
+      <pre class="petal" id="petal7">
+        - - -           
+    /       /
+     `.__  /
+      </pre>
 
-    <pre class="petal" id="petal5">
-.     \ 
-|       |
- \.__ .'
-
-</pre
-    >
-
-    <pre class="petal" id="petal6">
- /      . 
-|       |   
- `._  ./
-</pre
-    >
-
-    <pre class="petal" id="petal7">
-    - - -           
-/       /
- `.__  /
-</pre
-    >
-
-    <pre class="petal" id="petal8">
-  _  _       
-.'    \ 
-|       \ 
- \  - - - 
-</pre
-    >
+      <pre class="petal" id="petal8">
+      _  _       
+    .'    \ 
+    |       \ 
+     \  - - - 
+      </pre>
+    </div>
 
     <script>
       const result = document.getElementById("result");
       const petals = document.querySelectorAll(".petal");
-      let count = 8;
+      let count = petals.length;
 
       petals.forEach((petal) => {
         petal.addEventListener("click", () => {
           result.innerText =
             result.innerText === "loves me" ? "loves me not" : "loves me";
           petal.style.display = "none";
-          count = count - 1;
+          count--;
           if (count === 0 && result.innerText === "loves me not") {
-            const randomIndex = Math.floor(Math.random() * 5);
-        const options = [":(", "huh. guess not", "oops", "oh no :-(","i'm sorry boo"];
-            result.innerText = options[randomIndex]; // Select one of the options randomly
+            const options = [":(", "huh. guess not", "oops", "oh no :-(", "i'm sorry boo"];
+            result.innerText = options[Math.floor(Math.random() * options.length)];
           }
         });
       });
 
-      if (count === 0 && result.innerText === "loves me not") {
-        const randomIndex = Math.floor(Math.random() * 5);
-        const options = [":(", "huh. guess not", "oops", "oh no :-(","i'm sorry boo"];
-        result.innerText = options[randomIndex];
-      }
-   window.addEventListener("load", () => {
-  const flower = document.getElementById("flower");
-
-  flower.scrollIntoView({
-    behavior: "auto",
-    block: "center",
-    inline: "center"
-  });
-
-
+      // Scroll flower into center on page load
+      window.addEventListener("load", () => {
+        const flower = document.getElementById("flower");
+        flower.scrollIntoView({
+          behavior: "auto",
+          block: "center",
+          inline: "center",
+        });
+      });
     </script>
   </body>
 </html>
