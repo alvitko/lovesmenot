@@ -13,51 +13,59 @@
 
       body {
         font-family: monospace;
-        font-size: 12px;
-        line-height: 1.5;
+        background: white;
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: white;
         overflow-x: hidden;
+        padding: 20px;
       }
 
       .container {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: relative;
-        max-width: 90vw;
+        font-size: 1em;
+        line-height: 1.5;
+        max-width: 600px;
+        width: 100%;
       }
 
       #result {
-        margin-bottom: 20px;
+        margin-bottom: 1em;
         text-align: center;
       }
 
       #flower {
         text-align: center;
         cursor: pointer;
+        z-index: 1;
       }
 
       .petal {
         position: absolute;
+        font-size: 1em;
       }
 
-      /* Responsive placement using percentage for petals */
-      #petal1 { top: 5%; left: 45%; }
-      #petal2 { top: 5%; left: 55%; }
-      #petal3 { top: 15%; left: 65%; }
-      #petal4 { top: 30%; left: 65%; }
-      #petal5 { top: 40%; left: 55%; }
-      #petal6 { top: 40%; left: 45%; }
-      #petal7 { top: 30%; left: 35%; }
-      #petal8 { top: 15%; left: 35%; }
+      /* Relative placement in % from container */
+      #petal1 { top: 10%; left: 42%; }
+      #petal2 { top: 10%; left: 58%; }
+      #petal3 { top: 25%; left: 70%; }
+      #petal4 { top: 45%; left: 68%; }
+      #petal5 { top: 60%; left: 55%; }
+      #petal6 { top: 60%; left: 40%; }
+      #petal7 { top: 45%; left: 28%; }
+      #petal8 { top: 25%; left: 26%; }
 
       @media (max-width: 600px) {
         body {
-          font-size: 10px;
+          font-size: 14px;
+        }
+
+        .container {
+          font-size: 1.2em;
         }
       }
     </style>
