@@ -214,9 +214,15 @@ body {
         const options = [":(", "huh. guess not", "oops", "oh no :-(","i'm sorry boo"];
         result.innerText = options[randomIndex];
       }
-    window.addEventListener("load", () => {
-  window.scrollTo(300, 200);
-});
+   window.addEventListener("load", () => {
+  const flower = document.getElementById("flower");
+
+  flower.scrollIntoView({
+    behavior: "auto",
+    block: "center",
+    inline: "center"
+  });
+
 
     </script>
   </body>
