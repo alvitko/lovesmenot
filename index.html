@@ -1,112 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>loves me/not</title>
     <style>
-      pre {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: fixed;
-        top: 55%;
-        left: 48%;
-        transform: translate(-50%, -50%);
-        cursor: pointer; /* Add cursor pointer to indicate clickable */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-      p {
-        font-size: 12px;
+
+      body {
         font-family: monospace;
+        font-size: 12px;
         line-height: 1.5;
-        position: Absolute;
-        top: 170px;
-        left: 720px;
-        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: white;
+        overflow-x: hidden;
       }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        max-width: 90vw;
+      }
+
+      #result {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
       #flower {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 425px;
-        left: 687px;
+        text-align: center;
+        cursor: pointer;
       }
 
-      #petal1 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 273px;
-        left: 709px;
+      .petal {
+        position: absolute;
       }
 
-      #petal2 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 273px;
-        left: 755px;
-      }
+      /* Responsive placement using percentage for petals */
+      #petal1 { top: 5%; left: 45%; }
+      #petal2 { top: 5%; left: 55%; }
+      #petal3 { top: 15%; left: 65%; }
+      #petal4 { top: 30%; left: 65%; }
+      #petal5 { top: 40%; left: 55%; }
+      #petal6 { top: 40%; left: 45%; }
+      #petal7 { top: 30%; left: 35%; }
+      #petal8 { top: 15%; left: 35%; }
 
-      #petal3 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 310px;
-        left: 790px;
-      }
-
-      #petal4 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 368px;
-        left: 787px;
-      }
-
-      #petal5 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 398px;
-        left: 750px;
-      }
-
-      #petal6 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 385px;
-        left: 703px;
-      }
-      #petal7 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 349px;
-        left: 691px;
-      }
-
-      #petal8 {
-        font-size: 12px;
-        font-family: monospace;
-        line-height: 1.5;
-        position: Absolute;
-        top: 300px;
-        left: 665px;
+      @media (max-width: 600px) {
+        body {
+          font-size: 10px;
+        }
       }
     </style>
   </head>
   <body>
-    <p id="result">loves me??? loves me not????</p>
-    <pre id="flower">
+    <div class="container">
+      <p id="result">loves me??? loves me not????</p>
+      <pre id="flower">
   
                   ./#####\.         
                   |#######| 
@@ -121,95 +80,80 @@
                    |/__/
                    \
 
-    </pre>
+      </pre>
 
-    <pre class="petal" id="petal1">
+      <!-- Petals -->
+      <pre class="petal" id="petal1">
    __         
 .'     `..
 |        |
  \      .
-</pre
-    >
+      </pre>
 
-    <pre class="petal" id="petal2">
+      <pre class="petal" id="petal2">
     __
  .'     `.
 |        |
 .       /
-</pre
-    >
+      </pre>
 
-    <pre class="petal" id="petal3">
+      <pre class="petal" id="petal3">
       __
   /    `.
 /       |
 -------/
-</pre
-    >
+      </pre>
 
-    <pre class="petal" id="petal4">
+      <pre class="petal" id="petal4">
   _ _   
         \
  \      |
    \  _.'
+      </pre>
 
-</pre
-    >
-
-    <pre class="petal" id="petal5">
+      <pre class="petal" id="petal5">
 .     \ 
 |       |
  \.__ .'
+      </pre>
 
-</pre
-    >
-
-    <pre class="petal" id="petal6">
+      <pre class="petal" id="petal6">
  /      . 
 |       |   
  `._  ./
-</pre
-    >
+      </pre>
 
-    <pre class="petal" id="petal7">
+      <pre class="petal" id="petal7">
     - - -           
 /       /
  `.__  /
-</pre
-    >
+      </pre>
 
-    <pre class="petal" id="petal8">
+      <pre class="petal" id="petal8">
   _  _       
 .'    \ 
 |       \ 
  \  - - - 
-</pre
-    >
+      </pre>
+    </div>
 
     <script>
       const result = document.getElementById("result");
       const petals = document.querySelectorAll(".petal");
-      let count = 8;
+      let count = petals.length;
 
       petals.forEach((petal) => {
         petal.addEventListener("click", () => {
           result.innerText =
             result.innerText === "loves me" ? "loves me not" : "loves me";
           petal.style.display = "none";
-          count = count - 1;
+          count--;
           if (count === 0 && result.innerText === "loves me not") {
-            const randomIndex = Math.floor(Math.random() * 5);
-        const options = [":(", "huh. guess not", "oops", "oh no :-(","i'm sorry boo"];
-            result.innerText = options[randomIndex]; // Select one of the options randomly
+            const options = [":(", "huh. guess not", "oops", "oh no :-(", "i'm sorry boo"];
+            result.innerText = options[Math.floor(Math.random() * options.length)];
           }
         });
       });
-
-      if (count === 0 && result.innerText === "loves me not") {
-        const randomIndex = Math.floor(Math.random() * 5);
-        const options = [":(", "huh. guess not", "oops", "oh no :-(","i'm sorry boo"];
-        result.innerText = options[randomIndex];
-      }
     </script>
   </body>
 </html>
